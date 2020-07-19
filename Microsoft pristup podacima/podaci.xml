@@ -1,0 +1,92 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Kupci">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="KupacID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" />
+                <xs:element name="NazivKupca">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="50" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="Adresa" minOccurs="0">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="200" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Fakture">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FakturaID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" />
+                <xs:element name="KupacID" type="xs:int" />
+                <xs:element name="Datum" type="xs:dateTime" default="2020-04-09T13:08:30.0609546+02:00" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="FaktureStavke">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FakturaID" type="xs:int" />
+                <xs:element name="NazivFakture">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="40" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="NazivStavke" type="xs:decimal" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Kupci" />
+        <xs:field xpath="KupacID" />
+      </xs:unique>
+      <xs:unique name="Fakture_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Fakture" />
+        <xs:field xpath="FakturaID" />
+      </xs:unique>
+      <xs:unique name="FaktureStavke_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//FaktureStavke" />
+        <xs:field xpath="FakturaID" />
+        <xs:field xpath="NazivStavke" />
+      </xs:unique>
+      <xs:keyref name="FakturaStavke" refer="Fakture_Constraint1" msdata:UpdateRule="None" msdata:DeleteRule="None">
+        <xs:selector xpath=".//FaktureStavke" />
+        <xs:field xpath="FakturaID" />
+      </xs:keyref>
+      <xs:keyref name="KupacFaktura" refer="Constraint1" msdata:UpdateRule="None" msdata:DeleteRule="None">
+        <xs:selector xpath=".//Fakture" />
+        <xs:field xpath="KupacID" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <Kupci>
+    <KupacID>1</KupacID>
+    <NazivKupca>a</NazivKupca>
+    <Adresa>a</Adresa>
+  </Kupci>
+  <Fakture>
+    <FakturaID>1</FakturaID>
+    <KupacID>1</KupacID>
+    <Datum>2020-04-09T13:08:30.0520002+02:00</Datum>
+  </Fakture>
+  <FaktureStavke>
+    <FakturaID>1</FakturaID>
+    <NazivFakture>asd</NazivFakture>
+    <NazivStavke>12</NazivStavke>
+  </FaktureStavke>
+</NewDataSet>

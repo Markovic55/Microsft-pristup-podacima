@@ -1,0 +1,9 @@
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\bin\Debug\MTZPPPrviProjekat.exe.config
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\bin\Debug\MTZPPPrviProjekat.exe
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\bin\Debug\MTZPPPrviProjekat.pdb
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\obj\Debug\MTZPPPrviProjekat.csprojAssemblyReference.cache
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\obj\Debug\MTZPPPrviProjekat.Form1.resources
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\obj\Debug\MTZPPPrviProjekat.Properties.Resources.resources
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\obj\Debug\MTZPPPrviProjekat.csproj.GenerateResource.cache
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\obj\Debug\MTZPPPrviProjekat.exe
+C:\Users\Pc\Desktop\Fax\MTZPP\SolMTZPPPrviProjekat\MTZPPPrviProjekat\obj\Debug\MTZPPPrviProjekat.pdb
